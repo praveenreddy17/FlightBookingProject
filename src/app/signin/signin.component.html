@@ -1,0 +1,36 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">User Login  <span class="req"><small>
+                                </small></span></legend>
+
+                    <div class="form-group">
+                        <label for="userName"><span class="req">* </span> UserName: <small>This will be your login user
+                                name</small> </label>
+                        <input required type="text" [(ngModel)]="user.userName" name="firstName" id="firstName"
+                            class="form-control phone" maxlength="255" placeholder="Enter your UserName..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"><span class="req">* </span> Password: <small>This will be your login password
+                                </small> </label>
+                        <input required type="password" [(ngModel)]="user.password" name="lastName" id="lastName"
+                            class="form-control phone" maxlength="255" placeholder="Enter your password..." />
+                    </div>
+
+                  
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Login" (click)="login(user)">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
