@@ -1,0 +1,57 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Add Flight <span class="req"><small>
+                                </small></span></legend>
+
+                    <div class="form-group">
+                        <label for="fname"><span class="req">* </span> Flight Name: <small></small> </label>
+                        <input required type="text" [(ngModel)]="flight.flightName" name="fname" id="fname"
+                            class="form-control phone" maxlength="255" placeholder="Enter your UserName..." />
+                    </div>
+                   <div class="form-group">
+                        <label for="fromplace"><span class="req">* </span> From : <small>  </small> </label>
+                        <input required type="text" [(ngModel)]="flight.fromPlace" name="fromPlace" id="fromPlace"
+                            class="form-control phone" maxlength="255" placeholder="Enter from place" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="toplace"><span class="req">* </span> To : <small></small> </label>
+                        <input required type="text" [(ngModel)]="flight.toPlace" name="toplace" id="toplace"
+                            class="form-control phone" maxlength="255" placeholder="Enter to place" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Cost"><span class="req">* </span> Cost: <small></small> </label>
+                        <input required type="text" [(ngModel)]="flight.cost" name="Cost" id="Cost"
+                            class="form-control phone" maxlength="255" placeholder="Enter Cost" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Is Active:</label>
+                        <div>
+                          <input id="male" type="radio" value="Y" name="gender"  [(ngModel)]="flight.isActive" >
+                          <label for="male">Yes</label>
+                       </div>
+              
+                       <div>
+                          <input id="female" type="radio" value="N" name="gender" [(ngModel)]="flight.isActive" >
+                          <label for="female">No</label>
+                       </div>
+                          
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Add Flight" (click)="addflight(flight)">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+

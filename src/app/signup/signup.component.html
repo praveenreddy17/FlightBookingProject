@@ -1,0 +1,59 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">User Login Page <span class="req"><small>
+                                </small></span></legend>
+
+                    <div class="form-group">
+                        <label for="userName"><span class="req">* </span> UserName: <small>This will be your further login user 
+                                name</small> </label>
+                        <input required type="text" [(ngModel)]="user.userName" name="firstName" id="firstName"
+                            class="form-control phone" maxlength="255" placeholder="Enter your UserName..." />
+                    </div>
+                   <div class="form-group">
+                        <label for="password"><span class="req">* </span> Password: <small>This will be your further login password 
+                                </small> </label>
+                        <input required type="password" [(ngModel)]="user.password" name="lastName" id="lastName"
+                            class="form-control phone" maxlength="255" placeholder="Enter your password..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><span class="req">* </span> E mail: <small></small> </label>
+                        <input required type="text" [(ngModel)]="user.email" name="email" id="email"
+                            class="form-control phone" maxlength="255" placeholder="Enter your email..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNo"><span class="req">* </span> ContactNo: <small></small> </label>
+                        <input required type="text" [(ngModel)]="user.contactNo" name="contactNo" id="contactNo"
+                            class="form-control phone" maxlength="255" placeholder="Enter your contactNo..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Is Admin:</label>
+                        <div>
+                          <input id="male" type="radio" value="Y" name="gender"  [(ngModel)]="user.isAdmin" >
+                          <label for="male">Yes</label>
+                       </div>
+              
+                       <div>
+                          <input id="female" type="radio" value="N" name="gender" [(ngModel)]="user.isAdmin" >
+                          <label for="female">No</label>
+                       </div>
+                          
+                       
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="register(user)">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+

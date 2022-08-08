@@ -1,0 +1,36 @@
+<div class="panel-body">
+    <table class="table table-striped">
+       
+      <thead>
+        <tr>
+          <th>SNo</th>
+          <th>Departure Date</th>  
+          <th>Company</th>                                       
+          <th>Departure City</th>
+          <th>Arrival City</th>
+          <th>Cost per head</th>
+          <th>No of Passengers</th>
+          <th>Total Cost</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+        <tr *ngFor="let booking of bookings;let i=index">
+          <td>{{i+1}}</td>
+          <td>{{booking.flightName}}</td>
+          <td>{{booking.date}}</td>
+          <td>{{booking.fromPlace}}</td>
+          <td>{{booking.toPlace}}</td>
+          <td>{{booking.cost}}</td>
+          <td> {{booking.noOfPassengers}}
+          </td>
+          <td>{{ booking.cost}}</td>
+          <td>
+            <button (click)="deleteFlight(booking)" class="btn btn-info" style="margin-left: 10px">Delete Booking</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button (click)="goHome()" class="btn btn-info" style="margin-left: 10px">Home</button>
